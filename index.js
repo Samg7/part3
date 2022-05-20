@@ -9,6 +9,8 @@ const app = express();
 // Enable cross-origin resource sharing middleware for frontend and backend
 app.use(cors());
 
+app.use(express.static('build'));
+
 // Explicitly defines express.json() to be the first middleware in the req-res chain
 app.use(express.json());
 
